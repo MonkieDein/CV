@@ -32,3 +32,21 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
 });
+
+function togglePDF(containerId, pdfLink) {
+    var container = document.getElementById(containerId);
+    var viewer = container.querySelector("embed");
+    var link = container.previousElementSibling;
+    
+    if (container.style.display === "none") {
+      viewer.src = pdfLink;
+      container.style.display = "block";
+      link.innerHTML = "Close PDF";
+    } else {
+      viewer.src = "";
+      container.style.display = "none";
+      link.innerHTML = "View PDF";
+    }
+  }
+  
+
