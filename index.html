@@ -260,13 +260,40 @@
             <!-- Class Projects-->
             <section class="resume-section" id="projects">
                 <div class="resume-section-content">
-                    <h2 class="mb-5">Projects</h2>
+                    <h2 class="mb-5">Projects</h2>                     
                     <div class="d-flex flex-column flex-md-row justify-content-between">
                         <div class="flex-grow-1">
                             <h3 class="mb-0">Cryptocurrency Analytics</h3>
-                            Report - <a href="#projects" onclick="togglePDF('cryptocurrency-report', 'https:%2F%2monkiedein.github.io/CV/assets/documents/CryptocurrencyClassProject.pdf')">View PDF</a> 
+
+                                                
+                    <div id="gallery1">
+                        <button id="gallery1-view-toggle" onclick="toggleView()">Toggle View</button>
+
+                        <div class="pdf-item">
+                            <a href="#projects" onclick="togglePDF('cryptocurrency-report', 'https://monkiedein.github.io/CV/assets/documents/CryptocurrencyClassProject.pdf')">
+                            <img src="assets/img/palceholder.jpg" alt="PDF Document">
+                            <span class="pdf-title">Cryptocurrency Analytics</span>
+                            </a>
+                            <div id="cryptocurrency-report" style="display:none;">
+                            <embed src="" type="application/pdf" width="100%" height="600px">
+                            </div>
+                        </div>
+                    
+                        <div class="pdf-item">
+                            <a href="#projects" onclick="togglePDF('pdf-viewer-2', 'https://monkiedein.github.io/CV/assets/documents/MDPslide.pdf')">
+                            <img src="assets/img/palceholder.jpg" alt="PDF Document">
+                            <span class="pdf-title">MDP on Blackjack</span>
+                            </a>
+                            <div id="pdf-viewer-2" style="display:none;">
+                            <embed src="" type="application/pdf" width="100%" height="600px">
+                            </div>
+                        </div>
+                    <!-- Add more PDF items as needed -->
+                    </div>
+
+                            Report - <a href="#projects" onclick="togglePDF('cryptocurrency-report', 'https://monkiedein.github.io/CV/assets/documents/CryptocurrencyClassProject.pdf')">View PDF</a> 
                                 <div id="cryptocurrency-report" style="display:none;">
-                                    <embed id="pdf-viewer" src="https://df660d53-db22-4dff-8899-56fa7ce1f7a8.filesusr.com/ugd/729039_1c7854460c1a4afe934fea28dce63e3b.pdf" type="application/pdf" width="100%" height="600px">
+                                    <embed id="pdf-viewer" src="" type="application/pdf" width="100%" height="600px">
                                 </div>
                             <div class="subheading mb-3">Jia Lin Hau, Gerasimos Mouikis, Spencer Pope</div>
                         </div>

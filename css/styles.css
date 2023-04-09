@@ -11433,3 +11433,59 @@ section.resume-section .resume-section-content {
     padding-bottom: 5rem;
   }
 }
+
+#pdf-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.pdf-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.pdf-item img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.2s ease-in-out;
+}
+
+.pdf-item:hover img {
+  transform: scale(1.05);
+}
+
+.pdf-title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.list-view .pdf-item {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.list-view .pdf-item img {
+  width: 200px;
+  height: auto;
+  margin-right: 20px;
+  float: left;
+  transition: none;
+}
+
+.list-view .pdf-title {
+  position: static;
+  background-color: transparent;
+  font-size: 14px;
+  margin-bottom: 10px;
+  text-align: left;
+}

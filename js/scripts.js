@@ -41,12 +41,32 @@ function togglePDF(containerId, pdfLink) {
     if (container.style.display === "none") {
       viewer.src = pdfLink;
       container.style.display = "block";
-      link.innerHTML = "Close PDF";
     } else {
       viewer.src = "";
       container.style.display = "none";
-      link.innerHTML = "View PDF";
+    }
+  }
+  // Function to toggle between grid view and list view
+function toggleView(galleryId) {
+    var pdfs = document.getElementById(galleryId).getElementsByClassName('pdf-thumbnail');
+    var viewButton = document.getElementById(galleryId + '-view-toggle');
+    
+    // If currently in grid view, switch to list view
+    if (viewButton.innerHTML == 'Switch to Grid View') {
+      for (var i = 0; i < pdfs.length; i++) {
+        pdfs[i].classList.add('pdf-list');
+      }
+      viewButton.innerHTML = 'Switch to List View';
+    }
+    // If currently in list view, switch to grid view
+    else {
+      for (var i = 0; i < pdfs.length; i++) {
+        pdfs[i].classList.remove('pdf-list');
+      }
+      viewButton.innerHTML = 'Switch to Grid View';
     }
   }
   
-
+  // Add event listener to view toggle button
+  var viewButton = document.getElementById('gallery1-view-toggle');
+  viewButton.addEventListener('click', function() {toggleView('gallery1')});
