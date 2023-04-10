@@ -33,40 +33,19 @@ window.addEventListener('DOMContentLoaded', event => {
 
 });
 
-function togglePDF(containerId, pdfLink) {
-    var container = document.getElementById(containerId);
-    var viewer = container.querySelector("embed");
-    var link = container.previousElementSibling;
-    
-    if (container.style.display === "none") {
-      viewer.src = pdfLink;
-      container.style.display = "block";
-    } else {
-      viewer.src = "";
-      container.style.display = "none";
-    }
-  }
-  // Function to toggle between grid view and list view
-function toggleView(galleryId) {
-    var pdfs = document.getElementById(galleryId).getElementsByClassName('pdf-thumbnail');
-    var viewButton = document.getElementById(galleryId + '-view-toggle');
-    
-    // If currently in grid view, switch to list view
-    if (viewButton.innerHTML == 'Switch to Grid View') {
-      for (var i = 0; i < pdfs.length; i++) {
-        pdfs[i].classList.add('pdf-list');
-      }
-      viewButton.innerHTML = 'Switch to List View';
-    }
-    // If currently in list view, switch to grid view
-    else {
-      for (var i = 0; i < pdfs.length; i++) {
-        pdfs[i].classList.remove('pdf-list');
-      }
-      viewButton.innerHTML = 'Switch to Grid View';
-    }
-  }
+function togglePDF(containerId, pdfLink, documentStr) {
+  var container = document.getElementById(containerId);
+  var viewer = container.querySelector("embed");
+  var link = container.previousElementSibling;
   
-  // Add event listener to view toggle button
-  var viewButton = document.getElementById('gallery1-view-toggle');
-  viewButton.addEventListener('click', function() {toggleView('gallery1')});
+  if (container.style.display === "none") {
+    viewer.src = pdfLink;
+    container.style.display = "block";
+    link.innerHTML = "Close "+documentStr;
+  } else {
+    viewer.src = "";
+    container.style.display = "none";
+    link.innerHTML = "View "+documentStr;
+  }
+}
+  

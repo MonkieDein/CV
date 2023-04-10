@@ -260,49 +260,28 @@
             <!-- Class Projects-->
             <section class="resume-section" id="projects">
                 <div class="resume-section-content">
-                    <h2 class="mb-5">Projects</h2>                     
+                    <h2 class="mb-5">Projects</h2>                
                     <div class="d-flex flex-column flex-md-row justify-content-between">
-                        <div class="flex-grow-1">
+                        <div id="cryptocurrency-title" class="flex-grow-1">
                             <h3 class="mb-0">Cryptocurrency Analytics</h3>
-
-                                                
-                    <div id="gallery1">
-                        <button id="gallery1-view-toggle" onclick="toggleView()">Toggle View</button>
-
-                        <div class="pdf-item">
-                            <a href="#projects" onclick="togglePDF('cryptocurrency-report', 'https://monkiedein.github.io/CV/assets/documents/CryptocurrencyClassProject.pdf')">
-                            <img src="assets/img/palceholder.jpg" alt="PDF Document">
-                            <span class="pdf-title">Cryptocurrency Analytics</span>
-                            </a>
+                            <a href="#cryptocurrency-title" onclick="togglePDF('cryptocurrency-report', 
+                            'https://monkiedein.github.io/CV/assets/documents/CryptocurrencyClassProject.pdf','Report')">View Report</a> 
                             <div id="cryptocurrency-report" style="display:none;">
-                            <embed src="" type="application/pdf" width="100%" height="600px">
+                                <embed id="pdf-viewer" src="" type="application/pdf" width="100%" height="400px">
                             </div>
-                        </div>
-                    
-                        <div class="pdf-item">
-                            <a href="#projects" onclick="togglePDF('pdf-viewer-2', 'https://monkiedein.github.io/CV/assets/documents/MDPslide.pdf')">
-                            <img src="assets/img/palceholder.jpg" alt="PDF Document">
-                            <span class="pdf-title">MDP on Blackjack</span>
-                            </a>
-                            <div id="pdf-viewer-2" style="display:none;">
-                            <embed src="" type="application/pdf" width="100%" height="600px">
-                            </div>
-                        </div>
-                    <!-- Add more PDF items as needed -->
-                    </div>
-
-                            Report - <a href="#projects" onclick="togglePDF('cryptocurrency-report', 'https://monkiedein.github.io/CV/assets/documents/CryptocurrencyClassProject.pdf')">View PDF</a> 
-                                <div id="cryptocurrency-report" style="display:none;">
-                                    <embed id="pdf-viewer" src="" type="application/pdf" width="100%" height="600px">
-                                </div>
                             <div class="subheading mb-3">Jia Lin Hau, Gerasimos Mouikis, Spencer Pope</div>
                         </div>
                         <div class="flex-shrink-0"><span class="text-primary">Feb 2018 - May 2019</span></div>
                     </div>
                     Predicted cryptocurrency with time series analysis method VAR on the log return of the closing price.
                     <div class="d-flex flex-column flex-md-row justify-content-between">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">MDP on Blackjack [<a href="https://df660d53-db22-4dff-8899-56fa7ce1f7a8.filesusr.com/ugd/729039_8dec113dd0004c57bbc56f772a8b0a17.pdf">slide</a>]</h3>
+                        <div id="BJ-title" class="flex-grow-1">
+                            <h3 class="mb-0">MDP on Blackjack</h3>
+                            <a href="#BJ-title" onclick="togglePDF('BJppt', 
+                            'https://monkiedein.github.io/CV/assets/documents/MDPslide.pdf','Slide')">View Slide</a> 
+                            <div id="BJppt" style="display:none;">
+                                <embed id="pdf-viewer" src="" type="application/pdf" width="100%" height="400px">
+                            </div>
                             <div class="subheading mb-3">Jia Lin Hau, Marek Petrik</div>
                         </div>
                         <div class="flex-shrink-0"><span class="text-primary">Jan 2018 - Jul 2019</span></div>
@@ -310,6 +289,7 @@
                     Utilized MDP (Value Iteration) to solve for the optimal action (Stand, Hit, Split, Double, or Surrender) for BlackJack with R.
                 </div>
             </section>
+            <!-- todo : add EMOAI and CRACC here-->
             <hr class="m-0" />
 
             <!-- Awards-->
@@ -382,11 +362,23 @@
             <!-- Download-->
             <section class="resume-section" id="download">
                 <div class="resume-section-content">
-                    <h2 class="mb-5">[<a href="https://monkiedein.github.io/CV/assets/documents/JiaLinHau_CV.pdf">CV</a>]</h2>
+                    <h2 class="mb-5">Download </h2>
+                    <div class="flex-grow-1">
+                        <h3 class="mb-0"><a href="#cv-pdf" onclick="togglePDF('cv-pdf', 
+                            'https://monkiedein.github.io/CV/assets/documents/JiaLinHau_CV.pdf','CV')">View CV</a> 
+                            <div id="cv-pdf" style="display:none;">
+                                <embed id="pdf-viewer" src="" type="application/pdf" width="100%" height="600px">
+                            </div></h3>
+
+                        <h3 class="mb-0"><a href="#resume-pdf" onclick="togglePDF('resume-pdf', 
+                            'https://monkiedein.github.io/CV/assets/documents/JialinHauResume.pdf','1-page Resume')">View 1-page Resume</a> 
+                            <div id="resume-pdf" style="display:none;">
+                                <embed id="pdf-viewer" src="" type="application/pdf" width="100%" height="600px">
+                            </div></h3>
+                    </div>
+                
                 </div>
-                <div class="resume-section-content">
-                    <h2 class="mb-5">[<a href="https://monkiedein.github.io/CV/assets/documents/JialinHauResume.pdf">1 Page Resume</a>]</h2>
-                </div>
+                
             </section>
         </div>
         <!-- Bootstrap core JS-->
