@@ -49,3 +49,8 @@ function togglePDF(containerId, pdfLink, documentStr) {
   }
 }
   
+function openURL(url) {
+    // Open the URL in a new tab
+    window.open(url, '_blank');
+}
+
