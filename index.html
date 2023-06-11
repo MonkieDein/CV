@@ -257,24 +257,23 @@
                         <div class="flex-grow-1">
                             <h3 class="mb-0" id="publication">Publications and Preprints </h3>
                             <ul> 
+                                <li><a href="#publication" onclick="openURL('https://arxiv.org/abs/2304.12477')">On Dynamic Programming Decompositions
+                                    of Static Risk Measures in Markov Decision Processes.</a>
+                                    <b>Jia Lin Hau</b>, Erick Delage, Marek Petrik, Mohammad Ghavamzadeh, Arxiv 2023
+                                </li>
                                 <li>
                                     <a href="#publication" onclick="openURL('https://proceedings.mlr.press/v206/lin-hau23a/lin-hau23a.pdf')">Entropic Risk Optimization in Discounted MDPs.</a>
-                                    <b>Jia Lin Hau</b>, Marek Petrik, Mohammad Ghavamzadeh, AISTATS 2023</li> 
+                                    <b>Jia Lin Hau</b>, Marek Petrik, Mohammad Ghavamzadeh, AISTATS 2023. 
                                     <a href="#publication" onclick="togglePDF('EntropicMDPposter', 
-                                    'https://monkiedein.github.io/CV/assets/documents/Entropic Risk MDP poster.pdf','Poster')">View Poster</a> 
+                                    'https://monkiedein.github.io/CV/assets/documents/Entropic Risk MDP poster.pdf','Poster')">View Poster</a>, 
                                     <div id="EntropicMDPposter" style="display:none;">
                                         <embed id="pdf-viewer" src="" type="application/pdf" width="100%" height="600px">
                                     </div>
+                                    <a href="#publication" onclick="openURL('https://www.youtube.com/watch?v=HoZoJLw0NPg')">View Presentation (YouTube)</a>.
+                                </li> 
                                 <li><a href="#publication" onclick="openURL('https://arxiv.org/abs/2209.04067')">RASR: Risk-Averse Soft-Robust MDPs with EVaR and Entropic Risk.</a>
-                                    <b>Jia Lin Hau</b>, Marek Petrik, Mohammad Ghavamzadeh, Reazul Russel, Arxiv 2022</li>
-                                <li>Robust pest management using Reinforcement Learning. Talha Siddique, <b>Jia Lin Hau</b>, Shadi Atallah, Marek Petrik,RLDM 2019.
-                                    <a href="#publication" onclick="togglePDF('PestManagementReport', 
-                                    'https://monkiedein.github.io/CV/assets/documents/RobustPestManagement-poster.pdf','Poster')">View Poster</a> 
-                                    <div id="PestManagementReport" style="display:none;">
-                                        <embed id="pdf-viewer" src="" type="application/pdf" width="100%" height="600px">
-                                    </div>
-                                    <p>Extension project -> Other demonstration: <a href="#Cartpole-title">Bayesian MDP solved Cartpole with limited data</a> </p>
-                                    
+                                    <b>Jia Lin Hau</b>, Marek Petrik, Mohammad Ghavamzadeh, Reazul Russel, Arxiv 2022
+                                </li>
                             </ul> 
                         </div>
                     </div>
@@ -295,7 +294,6 @@
             <section class="resume-section" id="projects">
                 <div class="resume-section-content">
                     <h2 class="mb-5">Projects</h2>
-                    
                     <div class="flex-grow-1">
                         <h3 class="mb-0">Group Project</h3>
                         <div id="EMOAI-title" class="d-flex flex-column flex-md-row justify-content-between">
@@ -313,6 +311,22 @@
                             <li>Implemented active learning by allowing users to verify/update labels of their own emotion which enable personalized classification.</li>
                         </ul>
 
+                        <div id="PestManagement-title" class="d-flex flex-column flex-md-row justify-content-between">
+                            <h4 class="mb-0">Robust pest management using RL</h4> 
+                            <div class="subheading mb-4">Talha Siddique, <b>Jia Lin Hau</b>, Shadi Atallah, Marek Petrik.</div>
+                            <div class="flex-shrink-0"><span class="text-primary">Spring 2019</span></div>
+                        </div>
+                        <a href="#PestManagement-title" onclick="togglePDF('PestManagementReport', 
+                        'https://monkiedein.github.io/CV/assets/documents/RobustPestManagement-poster.pdf','Poster')">RLDM 2019 Poster</a> 
+                        <div id="PestManagementReport" style="display:none;">
+                            <embed id="pdf-viewer" src="" type="application/pdf" width="100%" height="600px">
+                        </div>
+                        <ul> 
+                            <li>Leveraged reinforcement learning techniques to develop a robust framework for risk-averse decision-making in pest management.</li>
+                            <li>Applied natural splines regression model to predict pest growth and STAN Bayesian inference language to generate posterior datasets,
+                        which were used to compute the optimal Robust MDP policy.</li>
+                            <li>Demonstrated the effectiveness of our framework by solving various domains including <a href="#Cartpole-title">Cartpole (OpenAI)</a> with limited data in Python.</li>
+                        </ul>
                         <div id="CRACC-title" class="d-flex flex-column flex-md-row justify-content-between">
                             <h4 class="mb-0">CRACC</h4> 
                             <p>Analyst / Android Developer</p>
